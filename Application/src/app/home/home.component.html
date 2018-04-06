@@ -1,0 +1,643 @@
+<div class="container">
+	<center><img src="../assets/imgs/logo.png" height="150" width="250" id="home"></center>
+	<div class="container">
+		<center><div class="row">
+			<div class=".col-sm-5 .col-md-6">
+				<div class="dropdown" dropdown>
+				    <button dropdownToggle class="btn btn-info dropdown-toggle waves-light" type="button" mdbRippleRadius>
+				        Sign In
+				    </button>
+
+				    <!--Menu-->
+				    <div class="dropdown-menu dropdown-info">
+				        <a class="dropdown-item" href="#" (click)="form1.show()">Employer</a>
+				        <a class="dropdown-item" href="#" (click)="form2.show()">Freelancer</a>
+				    </div>
+
+				</div>
+			</div>
+			<div class=".col-sm-5 .col-md-6">
+				<div class="dropdown" dropdown>
+				    <button dropdownToggle class="btn btn-info dropdown-toggle waves-light" type="button" mdbRippleRadius>
+				        Sign Up
+				    </button>
+
+				    <!--Menu-->
+				    <div class="dropdown-menu dropdown-info">
+				        <a class="dropdown-item" href="#" (click)="form3.show()">Employer</a>
+				        <a class="dropdown-item" href="#" (click)="form4.show()">Freelancer</a>
+				    </div>
+			</div>
+			</div>
+		</div></center>
+	</div>
+</div>
+
+<!--Banner Image -->
+<div class="jumbotron" id="banner" [ngStyle]= "getImage()">
+    <div class="container" id="bannerContainer">
+        <center><h1 class="animation-element slide-left">WELCOME TO DONE</h1>
+        <em><h2 class="animation-element slide-left">The Premium Freelancing Platform</h2></em><br>
+    	<div class="md-form form-sm">
+            <input mdbActive type="text" id="SearchField" class="form-control animation-element slide-left">
+            <center><label id="searchlabel" for="SearchField" style="margin-left: 25%;">SEARCH</label></center>
+            <button class="btn btn-info btn-lg waves-light animation-element slide-left" id="searchbtnBanner" mdbRippleRadius><i class="fa fa-search ml-1"></i> SEARCH</button>
+        </div></center>
+    </div>
+</div>
+
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark info-color" id="navigation">
+
+
+    <!-- Navbar brand -->
+    <logo><a class="navbar-brand" href="#">done</a></logo>
+
+    <!-- Collapsible content -->
+    <links>
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link waves-light" href="#home" mdbRippleRadius>Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" href="#about" mdbRippleRadius>About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" href="#team" mdbRippleRadius>The Team</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link waves-light" href="#service" mdbRippleRadius>Services</a>
+            </li>
+
+            <!-- Dropdown -->
+            <!-- <li class="nav-item dropdown" dropdown>
+                <a dropdownToggle mdbRippleRadius type="button" class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
+                Services<span class="caret"></span></a>
+                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                    <a class="dropdown-item waves-light" mdbRippleRadius href="#">Action</a>
+                    <a class="dropdown-item waves-light" mdbRippleRadius href="#">Another action</a>
+                    <a class="dropdown-item waves-light" mdbRippleRadius href="#">Something else here</a>
+                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item waves-light" mdbRippleRadius href="#">Separated link</a>
+                </div>
+            </li> -->
+
+            <li class="nav-item">
+                <a class="nav-link waves-light" href="#contact_us" mdbRippleRadius>Contact Us</a>
+            </li>
+
+        </ul>
+        <!-- Links -->
+
+        <!-- Search form -->
+        <form class="form-inline  waves-light" mdbRippleRadius>
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button id="navSearch"><i class="fa fa-search ml-1"></i></button>
+        </form>
+    </links>
+    <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+<div class="jumbotron about_us" id="about">
+    <div class="container about_us">
+        <center><h1>{{about_title}}</h1></center>
+        <hr>
+        <p>{{shown}}</p><p id="aboutShow"><b><em>Show More</em></b></p>
+        <p id="about_us_2">{{hidden}}</p>
+    </div>
+</div>
+
+
+<div class="jumbotron" id="team">
+    
+    <section class="section team-section pb-3">
+
+        <div class="container">
+            <!--Section heading-->
+            <center><h2 class="section-heading h1 pt-4 animation-element slide-left">Meet the People Behind the Curtains</h2></center>
+            <!--Section description-->
+            <center><h6 class="section-description animation-element slide-left">{{subtitle}}</h6></center>
+        </div>
+        <br>
+
+        <!--Grid row-->
+        <div class="row text-center" style="margin-left: 0;">
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-r animation-element slide-left">
+
+                <div class="avatar">
+                    <img src="../../assets/imgs/abrar.jpg" class="rounded-circle z-depth-1" alt="First avatar image" style="width: 255px;">
+                </div><br>
+                <h4>Abrar H. Kamal</h4>
+                <h6 class="font-bold blue-text">Backend Developer</h6>
+                <p>{{abrar_kamal}}</p>
+
+                <!--Facebook-->
+                <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+                <!--Twitter-->
+                <a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
+                <!--Instagram-->
+                <a class="icons-sm ins-ic"><i class="fa fa-instagram"> </i></a>
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-r animation-element slide-left">
+
+                <div class="avatar">
+                    <img src="../../assets/imgs/shadman.jpg" class="rounded-circle z-depth-1" alt="Second avatar image" style="width: 255px;">
+                </div><br>
+                <h4>Shadman F. Ahmad</h4>
+                <h6 class="font-bold blue-text">Frontend Developer</h6>
+                <p>{{shadman_ahmad}}</p>
+
+                <!--Linkedin-->
+                <a class="icons-sm li-ic"><i class="fa fa-linkedin"> </i></a>
+                <!--Facebook-->
+                <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+                <!--Dribbble-->
+                <a class="icons-sm dribbble-ic"><i class="fa fa-dribbble"> </i></a>
+                
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-r animation-element slide-left">
+
+                <div class="avatar">
+                    <img src="../../assets/imgs/rawfun.jpg" class="rounded-circle z-depth-1" alt="Third avatar image" style="width: 255px; height: 255px;">
+                </div><br>
+                <h4>Rawfun Hoque</h4>
+                <h6 class="font-bold blue-text">Backend Developer</h6>
+                <p>{{rawfun_hoque}}</p>
+
+                <!--Facebook-->
+                <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+                <!--Pinterest-->
+                <a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
+                <!--Email-->
+               <a class="icons-sm email-ic"><i class="fa fa-envelope-o"> </i></a>
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-r animation-element slide-left">
+
+                <div class="avatar">
+                    <img src="../../assets/imgs/mostofa.jpg" class="rounded-circle z-depth-1" alt="Fourth avatar image" style="width: 255px; height: 255px;">
+                </div><br>
+                <h4>Mostofa Kamal</h4>
+                <h6 class="font-bold blue-text">Graphics Designer</h6>
+                <p>{{mostofa_kamal}}</p>
+
+                <!--Google +-->
+                <a class="icons-sm gplus-ic"><i class="fa fa-google-plus"> </i></a>
+                <!--Facebook-->
+                <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+                <!--GitHub-->
+                <a class="icons-sm git-ic"><i class="fa fa-github"> </i></a>
+
+            </div>
+            <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+        <div class="row text-center" style="margin-left: 20%;">
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-r animation-element slide-left">
+
+                <div class="avatar">
+                    <img src="../../assets/imgs/sojib.jpg" class="rounded-circle z-depth-1" alt="Fifth sample avatar image" style="width: 255px;">
+                </div><br>
+                <h4>Shake S. Sojib</h4>
+                <h6 class="font-bold blue-text">Database Developer</h6>
+                <p>{{shake_sadi}}</p>
+
+                <!--Facebook-->
+                <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+                <!--Twitter-->
+                <a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
+                <!--Instagram-->
+                <a class="icons-sm ins-ic"><i class="fa fa-instagram"> </i></a>
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-r animation-element slide-left">
+
+                <div class="avatar">
+                    <img src="../../assets/imgs/imran.jpg" class="rounded-circle z-depth-1" alt="Sixth sample avatar image" style="width: 255px;">
+                </div><br>
+                <h4>Imran Hasan</h4>
+                <h6 class="font-bold blue-text">Junior Graphics Designer</h6>
+                <p>{{imran_hasan}}</p>
+
+                <!--Linkedin-->
+                <a class="icons-sm li-ic"><i class="fa fa-linkedin"> </i></a>
+                <!--Facebook-->
+                <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+                <!--Dribbble-->
+                <a class="icons-sm dribbble-ic"><i class="fa fa-dribbble"> </i></a>
+                
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-r animation-element slide-left">
+
+                <div class="avatar">
+                    <img src="../../assets/imgs/anjan.jpg" class="rounded-circle z-depth-1" alt="Seventh sample avatar image" style="width: 255px;">
+                </div><br>
+                <h4>Anjan Sarker</h4>
+                <h6 class="font-bold blue-text">Content Creator</h6>
+                <p>{{anjan_sarkar}}</p>
+
+                <!--Facebook-->
+                <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+                <!--Pinterest-->
+                <a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
+                <!--Email-->
+               <a class="icons-sm email-ic"><i class="fa fa-envelope-o"> </i></a>
+
+            </div>
+            <!--Grid column-->
+
+        </div>
+
+    </section>
+    <!--Section: Team v.1-->    
+</div>
+
+<div class="jumbotron" id="service">
+    
+<!--Section: Features v.2-->
+    <section class="section feature-box">
+
+        <!--Section heading-->
+        <div class="container">
+            <center><b><h1 class="section-heading pt-4">We Offer</h1></b></center>
+        <!--Section description-->
+            <center><p class="section-description lead grey-text">{{services_title}}</p></center>
+        </div><br>
+
+        <div class="container">
+        <!--Grid row-->
+            <div class="row features-large" style="margin-left: 0;">
+
+                <!--Grid column-->
+                <div class="col-md-4 mb-r">
+                    <div class="col-1 col-md-2 float-left">
+                        <i class="fa fa-bullhorn blue-text"></i>
+                    </div>
+                    <div class="col-10 col-md-9 col-lg-10 float-right">
+                        <h2 class="feature-title">{{freelancer_title}}</h2>
+                        <p class="grey-text">{{freelancer_content}}</p>
+                        <a class="btn btn-primary btn-sm ml-0 waves-light" (click)="freelancer.toggle()" mdbRippleRadius>Learn more</a>
+                    </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-4 mb-r">
+                    <div class="col-1 col-md-2 float-left">
+                        <i class="fa fa-cogs pink-text"></i>
+                    </div>
+                    <div class="col-10 col-md-9 col-lg-10 float-right">
+                        <h2 class="feature-title">{{tutors_title}}</h2>
+                        <p class="grey-text">{{tutors_content}}</p>
+                        <a class="btn btn-pink btn-sm ml-0 waves-light" (click)="tutors.toggle()" mdbRippleRadius>Learn more</a>
+                    </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-4 mb-r">
+                    <div class="col-1 col-md-2 float-left">
+                        <i class="fa fa-dashboard purple-text"></i>
+                    </div>
+                    <div class="col-10 col-md-9 col-lg-10 float-right">
+                        <h2 class="feature-title">{{employers_title}}</h2>
+                        <p class="grey-text">{{employers_content}}</p>
+                        <a class="btn btn-secondary btn-sm ml-0 waves-light" (click)="employers.toggle()" mdbRippleRadius>Learn more</a>
+                    </div>
+                </div>
+                <!--Grid column-->
+
+            </div>
+        <!--Grid row-->
+        </div>
+
+        <div class="container" [mdbCollapse]="isCollapsed" #freelancer="bs-collapse" style="margin-bottom: 70px;">
+            <div class="card info-color text-center z-depth-2">
+                <h3 class="card-header mdb-color white-text">{{freelancer_cardtitle}}</h3>
+                <div class="card-body">
+                    <p class="white-text mb-0">{{freelancer_cardcontent}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" [mdbCollapse]="isCollapsed" #tutors="bs-collapse" style="margin-bottom: 70px;">
+            <div class="card info-color text-center z-depth-2">
+                <h3 class="card-header mdb-color white-text">{{tutors_cardtitle}}</h3>
+                <div class="card-body">
+                    <p class="white-text mb-0">{{tutors_cardcontent}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" [mdbCollapse]="isCollapsed" #employers="bs-collapse" style="margin-bottom: 90px;">
+            <div class="card info-color text-center z-depth-2">
+                <h3 class="card-header mdb-color white-text">{{employers_cardtitle}}</h3>
+                <div class="card-body">
+                    <p class="white-text mb-0">{{employers_cardcontent}}</p>
+                </div>
+            </div>
+        </div>
+
+    </section><br>
+    <!--Section: Features v.2-->
+            
+</div>
+
+<div class="jumbotron" id="contact_us">   
+    <div class="row" style="margin-left: 0;">
+        <div class="col" id="map">
+            <h3>{{ maptitle }}</h3>
+            <hr>
+            <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zm">
+                <agm-marker [latitude]="lat" [longitude]="lng" [zoom]="zm"></agm-marker>
+            </agm-map>
+        </div>
+        <div class="col" style="margin-left: 5%;">
+            <h2>{{contacttitle}}</h2>
+            <hr>
+            <table>
+                <tr>
+                    <td>Company Name: </td>
+                    <td>done</td>
+                </tr><br>
+                <tr>
+                    <td>Address: </td>
+                    <td>House No 70, Road No. 11/A,<br> Dhanmondi R/A, <br> Dhaka 1209, Bangladesh</td>
+                </tr><br>
+                <tr>
+                    <td>Phone: </td>
+                    <td>+880 167 595 2173</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!--Footer-->
+<footer class="page-footer info-color center-on-small-only" style="margin-top: 0;">
+
+    <!--Footer Links-->
+    <div class="container">
+        <div class="row" style="margin-left: 2%;">
+
+            <!--First column-->
+            <div class="col-md-3" style="margin-left: 0;">
+                <h5 class="title">Links</h5>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </div>
+            <!--/.First column-->
+
+            <!--Second column-->
+            <div class="col-md-6">
+                <h5 class="title">Footer Content</h5>
+                <p>Here you can use rows and columns here to organize your footer content.</p>
+            </div>
+            <!--/.Second column-->
+            <div class="col-md-3">
+                <h5 class="title">Links</h5>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </div>
+        </div><br>
+        <center><button mat-mini-fab id="facebookbtn"></button>
+        <button mat-mini-fab id="linkedinbtn"></button>
+        <button mat-mini-fab id="twitterbtn"></button></center>
+    </div><br>
+    <!--/.Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            {{copyright}}
+        </div>
+    </div>
+    <!--/.Copyright-->
+</footer>
+<!--/.Footer-->
+
+
+
+<!--Employer Modal: Login Form-->
+<div mdbModal #form1="mdb-modal" class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header light-blue darken-3 white-text">
+                <h4 class="title"><i class="fa fa-user"></i> Log in - Employer</h4>
+                <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close" (click)="form1.hide()">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+                <div class="md-form form-sm">
+                    <i class="fa fa-envelope prefix"></i>
+                    <input mdbActive type="text" id="form30" class="form-control">
+                    <label for="form30">Your email</label>
+                </div>
+
+                <div class="md-form form-sm">
+                    <i class="fa fa-lock prefix"></i>
+                    <input mdbActive type="password" id="form31" class="form-control">
+                    <label for="form31">Your password</label>
+                </div>
+
+                <div class="text-center mt-2">
+                    <button class="btn btn-info waves-light" mdbRippleRadius>Log in <i class="fa fa-sign-in ml-1"></i></button>
+                </div>
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+                <div class="options text-center text-md-right mt-1">
+                    <p>Not a member? <a href="#">Sign Up</a></p>
+                    <p>Forgot <a href="#">Password?</a></p>
+                </div>
+                <button type="button" class="btn btn-outline-info ml-auto" data-dismiss="modal" (click)="form1.hide()" mdbRippleRadius>Close</button>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: Login Form Freelancer-->
+<div mdbModal #form2="mdb-modal" class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header light-blue darken-3 white-text">
+                <h4 class="title"><i class="fa fa-user"></i> Log in - Freelancer</h4>
+                <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close" (click)="form2.hide()">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+                <div class="md-form form-sm">
+                    <i class="fa fa-envelope prefix"></i>
+                    <input mdbActive type="text" id="form30" class="form-control">
+                    <label for="form30">Your email</label>
+                </div>
+
+                <div class="md-form form-sm">
+                    <i class="fa fa-lock prefix"></i>
+                    <input mdbActive type="password" id="form31" class="form-control">
+                    <label for="form31">Your password</label>
+                </div>
+
+                <div class="text-center mt-2">
+                    <button class="btn btn-info waves-light" mdbRippleRadius>Log in <i class="fa fa-sign-in ml-1"></i></button>
+                </div>
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+                <div class="options text-center text-md-right mt-1">
+                    <p>Not a member? <a href="#">Sign Up</a></p>
+                    <p>Forgot <a href="#">Password?</a></p>
+                </div>
+                <button type="button" class="btn btn-outline-info ml-auto" data-dismiss="modal" (click)="form2.hide()" mdbRippleRadius>Close</button>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: Login Form-->
+<div mdbModal #form3="mdb-modal" class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header light-blue darken-3 white-text">
+                <h4 class="title"><i class="fa fa-user-plus"></i> Register - Employer </h4>
+                <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close" (click)="form3.hide()">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+                <div class="md-form form-sm">
+                    <i class="fa fa-envelope prefix"></i>
+                    <input mdbActive type="text" id="form32" class="form-control">
+                    <label for="form32">Your email</label>
+                </div>
+
+                <div class="md-form form-sm">
+                    <i class="fa fa-lock prefix"></i>
+                    <input mdbActive type="password" id="form33" class="form-control">
+                    <label for="form33">Your password</label>
+                </div>
+
+                <div class="md-form form-sm">
+                    <i class="fa fa-lock prefix"></i>
+                    <input mdbActive type="password" id="form34" class="form-control">
+                    <label for="form34">Repeat password</label>
+                </div>
+
+                <div class="text-center mt-2">
+                    <button class="btn btn-info waves-light" mdbRippleRadius>Sign up <i class="fa fa-sign-in ml-1"></i></button>
+                </div>
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+                <div class="options text-center text-md-right mt-1">
+                    <p>Already have an account? <a href="#">Log In</a></p>
+                </div>
+                <button type="button" class="btn btn-outline-info ml-auto" data-dismiss="modal" (click)="form3.hide()" mdbRippleRadius>Close</button>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: Register Form-->
+<div mdbModal #form4="mdb-modal" class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header light-blue darken-3 white-text">
+                <h4 class="title"><i class="fa fa-user-plus"></i> Register - Freelancer</h4>
+                <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close" (click)="form4.hide()">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+                <div class="md-form form-sm">
+                    <i class="fa fa-envelope prefix"></i>
+                    <input mdbActive type="text" id="form32" class="form-control">
+                    <label for="form32">Your email</label>
+                </div>
+
+                <div class="md-form form-sm">
+                    <i class="fa fa-lock prefix"></i>
+                    <input mdbActive type="password" id="form33" class="form-control">
+                    <label for="form33">Your password</label>
+                </div>
+
+                <div class="md-form form-sm">
+                    <i class="fa fa-lock prefix"></i>
+                    <input mdbActive type="password" id="form34" class="form-control">
+                    <label for="form34">Repeat password</label>
+                </div>
+
+                <div class="text-center mt-2">
+                    <button class="btn btn-info waves-light" mdbRippleRadius>Sign up <i class="fa fa-sign-in ml-1"></i></button>
+                </div>
+
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+                <div class="options text-center text-md-right mt-1">
+                    <p>Already have an account? <a href="#">Log In</a></p>
+                </div>
+                <button type="button" class="btn btn-outline-info ml-auto" data-dismiss="modal" (click)="form4.hide()" mdbRippleRadius>Close</button>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!--Modal: Register Form-->
+
+
+            
