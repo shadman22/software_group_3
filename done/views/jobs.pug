@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= job.title
+  h5 Posted by #{postedby}
+  p= job.body
+  p Payment #{job.amount}
+  hr
+  if employer
+    if employer.id == job.postedby  
+      a.btn.btn-default(href='/jobs/edit/'+job._id) Edit
+      a.btn.btn-danger.delete-article(href='#', data-id= job._id) Delete
+  else if freelancer    
+      a.btn.btn-danger.delete-article(href='#', data-id= job._id) Apply

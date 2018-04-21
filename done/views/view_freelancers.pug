@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 #{title}
+  ul.list-group
+    each freelancer, i in freelancers
+      li.list-group-item
+        a(href="/freelancers/"+freelancer._id)= freelancer.name
+      
+    

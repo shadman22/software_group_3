@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 #{title}
+  ul.list-group
+    each job, i in jobs
+      li.list-group-item
+        a(href="/jobs/"+job._id)= job.title
+      
+    

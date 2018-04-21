@@ -1,0 +1,24 @@
+{
+  "name": "done",
+  "version": "1.0.0",
+  "description": "done web app for software engineering",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Software Group 3",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "express": "^4.16.3",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.1.2",
+    "mongoose": "^5.0.14",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.3"
+  }
+}

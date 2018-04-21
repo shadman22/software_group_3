@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/jobs/edit/'+job._id)
+    #form-group
+      label Title:
+      input.form-control(name='title', type='text', value=job.title)
+    #form-group
+      label Posted By
+      input.form-control(name='postedby', type='text', value=job.postedby)
+    #form-group
+      label Body
+      textarea.form-control(name='body')= job.body
+    #form-group
+      label Amount
+      input.form-control(name='amount', type='text', value=job.amount)
+       
+    input.btn.btn-primary(type='submit', value="Submit")
