@@ -2,45 +2,103 @@ doctype html
 html
   head
     title done
-    script(src="http://code.jquery.com/jquery-2.1.0.min.js")
-    script(src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous")
+    script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
+    link(href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet")
+    link(rel="stylesheet" href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
     script(src='/js/main.js')
-    link(rel="stylesheet" href='/bower_components/bootstrap/dist/css/bootstrap.css')
     link(rel="stylesheet" href='/css/style.css')
     
-  body
-    .container
-      nav.site-header.sticky-top.py-1
-    .container.d-flex.flex-column.flex-md-row.justify-content-between
-      a.py-2(href='/')
-        svg.d-block.mx-auto(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewbox='0 0 24 24', fill='none', stroke='currentColor', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
-          circle(cx='12', cy='12', r='10')
-          line(x1='14.31', y1='8', x2='20.05', y2='17.94')
-          line(x1='9.69', y1='8', x2='21.17', y2='8')
-          line(x1='7.38', y1='12', x2='13.12', y2='2.06')
-          line(x1='9.69', y1='16', x2='3.95', y2='6.06')
-          line(x1='14.31', y1='16', x2='2.83', y2='16')
-          line(x1='16.62', y1='12', x2='10.88', y2='21.94')
-        if employer    
-          a.py-2.d-none.d-md-inline-block(href='/employers/logout') Logout
-          a.py-2.d-none.d-md-inline-block(href='/jobs/add') Add job
-          a.py-2.d-none.d-md-inline-block(href='/jobs/view') view jobs  
+  body(onload="navbaranimation(); scrollsmooth();")
 
-        
-        else  
-          
-          a.py-2.d-none.d-md-inline-block(href='/employers/register') Register Employer
-          a.py-2.d-none.d-md-inline-block(href='/employers/login') Login Employer
-          a.py-2.d-none.d-md-inline-block(href='/freelancers/register') Register Freelancer
-          a.py-2.d-none.d-md-inline-block(href='/freelancers/login') Login Freelancer
-
-    .container
-      !=messages('message', locals)
-      if errors
-        each error, i in errors
-          div(class='alert alert-danger') #{error.msg}
-      block content
-        br
-        hr
-        footer
-          p Copyright &copy; 2018
+    div(class="container")
+      center
+        img(src="/imgs/logo.png" height="150" width="250")
+    if employer
+      div.container.buttons-login
+        div.row
+          div.col
+            center
+              button(type="button" class="btn login-btn" onclick="logout();") Logout
+          .col
+            center
+              .dropdown.show
+                a#dropdownMenuLink.btn.login-btn.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  | Actions
+                .dropdown-menu(aria-labelledby='dropdownMenuLink')
+                  a.dropdown-item(href='/jobs/add') Add Jobs
+                  a.dropdown-item(href='/jobs/view') View Jobs      
+    else
+      div.container.buttons-login
+        div.row
+          div.col
+            center
+              .dropdown.show
+                a#dropdownMenuLink.btn.login-btn.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  | Login
+                .dropdown-menu(aria-labelledby='dropdownMenuLink')
+                  a.dropdown-item(href='/freelancers/login') Freelancer Login
+                  a.dropdown-item(href='/employers/login') Employer Login
+          .col
+            center
+              .dropdown.show
+                a#dropdownMenuLink.btn.login-btn.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  | Register
+                .dropdown-menu(aria-labelledby='dropdownMenuLink')
+                  a.dropdown-item(href='/freelancers/register') Freelancer Register
+                  a.dropdown-item(href='/employers/register') Employer Register  
+    br                
+    .jumbotron.banner
+      .container.header-search
+        center
+          br
+          h1 Welcome To Done
+          h2 Make money and get your job done easy!
+        center
+          br
+          br
+          form(method='POST', action='#')
+            #form-group
+              //label.search-label Search
+              input.form-control.search-header(name='search_header', type='text' placeholder="SEARCH")
+            br    
+            input.btn.btn-search-header(type='submit', value="Submit")
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+      a.navbar-brand(href='#' style="margin-left:3%;") done
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item.active
+            a.nav-link(href='#')
+              | Home 
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='#') About
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              | Services
+            .dropdown-menu(aria-labelledby='navbarDropdown')
+              a.dropdown-item(href='#') Action
+              a.dropdown-item(href='#') Another action
+              .dropdown-divider
+              a.dropdown-item(href='#') Something else here
+          li.nav-item
+            a.nav-link(href='#') The Team
+          li.nav-item
+            a.nav-link(href='#') Contact Us
+        form.form-inline.my-2.my-lg-0
+          input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
+          button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+    
+    
+    !=messages('message', locals)
+    if errors
+      each error, i in errors
+        div(class='alert alert-danger') #{error.msg}
+    block content
+      br
+      hr
+      footer
+        p Copyright &copy; 2018

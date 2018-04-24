@@ -10,3 +10,224 @@
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
+
+.login-btn{
+	background: #41B8F7;
+	color: white;
+	width: 150px;
+	height: 45px;
+	margin-left: 2%;
+}
+.buttons-login{
+  width: 23em;
+}
+
+.banner{
+  background:url('/imgs/banner_home.jpg') no-repeat;
+  background-size: 100% 700px;
+  border-radius: 0px;
+  height: 700px;
+  padding: 130px;
+  margin-bottom: 0;
+}
+
+.search-label{
+  font-family: Chalduster, fantasy;
+  font-size: 40px;
+  margin: auto;
+}
+
+.header-search h1{
+  font-family: Chalkduster, fantasy;
+  font-size: 80px;
+}
+
+.header-search h2{
+  font-family: Chalkduster, fantasy;
+  font-size: 35px;
+}
+
+.search-header{
+  width: 40%;
+  height: 60px;
+  border-radius: 15px;
+  opacity: 0.7;
+}
+
+.btn-search-header{
+  background-color: #41B8F7;
+  height: 50px;
+  width: 180px;
+  border-radius: 12px;
+  color: white;
+}
+
+#about_us{
+  width: 100%;
+  background: transparent;
+}
+
+#about_us p{
+  text-align: justify;
+}
+
+#aboutShow{
+  font-size: 20px;
+  color: #41B8F7;
+}
+
+#showLess{
+  font-size: 20px;
+  color: #41B8F7;
+}
+
+#about_us h1{
+  font-size: 5em;
+  font-family: Chalduster, fantasy;
+}
+
+#team{
+  background: black;
+  margin-bottom: 0;
+}
+
+#team h1{
+  font-family: Chalkduster, fantasy;
+  color: #41B8F7;
+  font-size: 5em;
+}
+
+#team h3, h6, h4, h5{
+  font-family: Chalkduster, fantasy;
+  color: #41B8F7;
+}
+
+#team p {
+  font-size: 15px;
+  color: white;
+}
+
+#team hr{
+  border: 0.5px solid #41B8F7;
+  opacity: 0.5;
+}
+
+.jumbotron{
+  margin-top: 0;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+#services h1{
+  font-family: Chalkduster, fantasy;
+  color: #000;
+  background-color: #fff;
+  font-size: 5em;
+}
+
+.service-content{
+  text-align: justify;
+}
+
+.card{
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+#contact_us{
+  background-color: #000;
+  margin-bottom: 0;
+}
+
+#contact_us h2{
+  font-family: Chalkduster, fantasy;
+  color: #41B8F7;
+  font-size: 5em;
+}
+
+#contact_us hr{
+  border: 0.5px solid #41B8F7;
+  opacity: 0.5;
+}
+
+#map{
+  height:500px;
+  width: 100%;
+  border-radius:15px;
+}
+
+.content-card{
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+#contact_us table{
+  color: #41B8F7;
+  font-size: 20px;
+
+}
+
+footer{
+  background-color: #41B8F7;
+  color: black;
+  margin-top: 0;
+}
+
+.socials{
+  background:transparent;
+}
+
+.icon {
+  position:relative;
+  text-align:center;
+  width:0px;
+  height:0px;
+  padding:20px;
+  border-top-right-radius:  20px;
+  border-top-left-radius:   20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius:  20px; 
+  -moz-border-radius:     20px 20px 20px 20px;
+  -webkit-border-radius:    20px 20px 20px 20px;
+  -khtml-border-radius:     20px 20px 20px 20px;  
+  color:#FFFFFF;
+}
+.icon i {
+  font-size:20px;
+  position:absolute;
+  left:9px;
+  top:10px;
+}
+.icon.social {
+  float:left;
+  margin:0 5px 0 0;
+  cursor:pointer;
+  background:#6d6e71 ;
+  color:#262626;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;  
+}
+.icon.social:hover {
+  background:#262626 ;
+  color:#6d6e71;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-filter: drop-shadow(0 1px 10px rgba(0,0,0,.8));
+  -moz-filter:  drop-shadow(0 1px 10px rgba(0,0,0,.8));
+  -ms-filter:     drop-shadow(0 1px 10px rgba(0,0,0,.8));
+  -o-filter:    drop-shadow(0 1px 10px rgba(0,0,0,.8));
+  filter:       drop-shadow(0 1px 10px rgba(0,0,0,.8));   
+}
+.icon.social.fb i {
+  left:13px;
+  top:10px;
+}
+.icon.social.tw i {
+  left:11px;
+}
+.icon.social.in i {
+  left:11px;
+}

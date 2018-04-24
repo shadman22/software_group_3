@@ -1,39 +1,41 @@
 extends layout
 
 block content
-  h1 Freelancer Register
-  form(method='POST', action='/freelancers/register')
-    #form-group
-      label Name:
-      input.form-control(name='name', type='text')
-    #form-group
-      label Email
-      input.form-control(name='email', type='text')
-    #form-group
-      label Username
-      input.form-control(name='username', type='text')
-    #form-group
-      label Contact
-      input.form-control(name='contact', type='text')
-    #form-group
-      label Password
-      input.form-control(name='password', type='password')
-    #form-group
-      label Confirm Password
-      input.form-control(name='password1', type='password')
-    #form-group
-      label Location
-      input.form-control(name='location', type='text', placeholder="Enter your location")
-    #form-group
-      label Age
-      input.form-control(name='age', type='text')
-    #form-group
-      label Profession
-      input.form-control(name='profession', type='text')
-    #form-group
-      label Specializaton
-      input.form-control(name='specializaton', type='text', placeholder="Please enter your skills here. Use keywords such as 'Photography, Web design'")
+  br
+  .container
+      h1 Freelancer Register
+      form(method='POST', action='/freelancers/register')
+        #form-group
+          label Name:
+          input.form-control(name='name', type='text')
+        #form-group
+          label Email
+          input.form-control(name='email', type='text')
+        #form-group
+          label Username
+          input.form-control(name='username', type='text')
+        #form-group
+          label Contact
+          input.form-control(name='contact', type='text')
+        #form-group
+          label Password
+          input.form-control(name='password', type='password')
+        #form-group
+          label Confirm Password
+          input.form-control(name='password1', type='password')
+        #form-group
+          label Location
+          input.form-control(name='location', type='text', placeholder="Enter your location")
+        #form-group
+          label Age
+          input.form-control(name='age', type='text')
+        #form-group
+          label Profession
+          input.form-control(name='profession', type='text')
+        #form-group
+          label Specializaton
+          input.form-control(name='specializaton', type='text', placeholder="Please enter your skills here. Use keywords such as 'Photography, Web design'")
 
-        
-        
-    input.btn.btn-primary(type='submit', value="Submit")
+            
+            
+        input.btn.btn-primary(type='submit', value="Submit")
