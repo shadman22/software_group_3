@@ -231,3 +231,49 @@ footer{
 .icon.social.in i {
   left:11px;
 }
+
+
+.register{
+  width: 50%;
+  box-shadow: 5px 5px 5px 5px #252525;
+  border-radius: 10px;
+  padding:30px;
+  background-color: #fff;
+}
+
+.login{
+  width: 50%;
+  box-shadow: 5px 5px 5px 5px #252525;
+  border-radius: 10px;
+  padding:30px;
+  background-color: #fff;
+}
+
+#freelancer_header{
+  font-family: Chalkduster, fantasy;
+  font-size: 35px;
+  color: #41B8F7;
+}
+
+.form-control{
+  width: 100%;
+}
+
+.form-input {
+  position: relative;
+  padding: 12px 0px 5px 0;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 1px 0 0 #e5e5e5;
+  transition: box-shadow 150ms ease-out;
+}
+  .form-input:focus {
+    box-shadow: 0 2px 0 0 #41B8F7;
+  }
+#freelancer{
+  background-color: #000;
+  margin-bottom: 0;
+}
+

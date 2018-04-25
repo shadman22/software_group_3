@@ -1,41 +1,62 @@
 extends layout
 
 block content
-  br
-  .container
-      h1 Freelancer Register
-      form(method='POST', action='/freelancers/register')
-        #form-group
-          label Name:
-          input.form-control(name='name', type='text')
-        #form-group
-          label Email
-          input.form-control(name='email', type='text')
-        #form-group
-          label Username
-          input.form-control(name='username', type='text')
-        #form-group
-          label Contact
-          input.form-control(name='contact', type='text')
-        #form-group
-          label Password
-          input.form-control(name='password', type='password')
-        #form-group
-          label Confirm Password
-          input.form-control(name='password1', type='password')
-        #form-group
-          label Location
-          input.form-control(name='location', type='text', placeholder="Enter your location")
-        #form-group
-          label Age
-          input.form-control(name='age', type='text')
-        #form-group
-          label Profession
-          input.form-control(name='profession', type='text')
-        #form-group
-          label Specializaton
-          input.form-control(name='specializaton', type='text', placeholder="Please enter your skills here. Use keywords such as 'Photography, Web design'")
-
-            
-            
-        input.btn.btn-primary(type='submit', value="Submit")
+  .jumbotron(id="freelancer")
+    br
+    .container
+      center
+        h1(id="freelancer_header") Freelancer's Registration
+        br
+    .container.register
+      form.freelancer_form_register(method='POST', action='/freelancers/register')
+        .form-group
+          input.form-control.form-input(name='name', type='text' placeholder="Name")
+        .form-group
+          input.form-control.form-input(placeholder="Email" name='email', type='text')
+        .form-group
+          input.form-control.form-input(placeholder="Username" name='username', type='text')
+        .form-group
+          input.form-control.form-input(placeholder="Contact" name='contact', type='text')
+        .form-group
+          input.form-control.form-input(name='password', type='password' placeholder="Password")
+        .form-group
+          input.form-control.form-input(name='password1', type='password' placeholder="Confirm Password")
+        .form-group
+          input.form-control.form-input(name='location', type='text', placeholder="Enter your location")
+        .form-group
+          input.form-control.form-input(name='age', type='text' placeholder="Age")
+        .form-group
+          input.form-control.form-input(name='profession', type='text' placeholder="Profession")
+        .form-group
+          input.form-control.form-input(name='specializaton', type='text', placeholder="Please enter your skills here. Use keywords such as 'Photography, Web design'")
+          br
+          center
+            input.btn.login-btn(type='submit', value="REGISTER")
+    br
+    br
+  footer
+    br
+    .container
+      center
+        table
+          tr
+            td
+              .icon.social.fb
+                i.fa.fa-facebook
+            td
+              .icon.social.in
+                i.fa.fa-linkedin
+            td
+              .icon.social.tw
+                i.fa.fa-twitter
+    br
+    .container 
+      .row
+        .col
+          p this a text
+        .col
+          p this a text
+        .col
+          p this a text
+        .col
+          p this a text

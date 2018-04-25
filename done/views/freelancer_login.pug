@@ -1,13 +1,43 @@
 extends layout
 
 block content
-  h1 Freelancer Login
-  form(method='POST', action='/employers/login')
-    #form-group
-      label Username
-      input.form-control(name='username', type='text')
-    #form-group
-      label Password
-      input.form-control(name='password', type='password')
-    br    
-    input.btn.btn-primary(type='submit', value="Submit")
+  .jumbotron(id="freelancer")
+    .container(id="freelancer_header")
+      center
+        h1 Freelancer Login
+      br
+    .container.login
+      form(method='POST', action='/employers/login')
+        .form-group
+          input.form-control.form-input(name='username', type='text' placeholder="Username")
+        .form-group
+          input.form-control.form-input(name='password', type='password' placeholder="Password")
+        br
+        center
+          input.btn.login-btn(type='submit', value="LOGIN")
+  footer
+    br
+    .container
+      center
+        table
+          tr
+            td
+              .icon.social.fb
+                i.fa.fa-facebook
+            td
+              .icon.social.in
+                i.fa.fa-linkedin
+            td
+              .icon.social.tw
+                i.fa.fa-twitter
+    br
+    .container 
+      .row
+        .col
+          p this a text
+        .col
+          p this a text
+        .col
+          p this a text
+        .col
+          p this a text
