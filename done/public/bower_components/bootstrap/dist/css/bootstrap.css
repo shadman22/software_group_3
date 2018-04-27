@@ -5070,6 +5070,7 @@ input[type="button"].btn-block {
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
+  border-radius: 15px;
 }
 
 .list-group-item-action {
@@ -5094,7 +5095,8 @@ input[type="button"].btn-block {
   display: block;
   padding: 0.75rem 1.25rem;
   margin-bottom: -1px;
-  background-color: #fff;
+  /* background-color: #fff; */
+  border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 

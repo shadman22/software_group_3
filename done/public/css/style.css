@@ -1,3 +1,7 @@
+body{
+  font-family: OCR A Std, monospace;
+}
+
 .alert-error{
   color:#a94442;
   background-color: #f2dede;
@@ -18,21 +22,34 @@
 	height: 45px;
 	margin-left: 2%;
 }
+
+.logout_btn{
+  background: #41B8F7;
+  color: white;
+  width: 90%;
+  height: 45px;
+  margin-left: 2%;
+}
+
+.dropdown-menu{
+  width: 90%;
+}
+
 .buttons-login{
-  width: 23em;
+  width: 31em;
 }
 
 .banner{
   background:url('/imgs/banner_home.jpg') no-repeat;
   background-size: 100% 700px;
   border-radius: 0px;
-  height: 700px;
+  height: 600px;
   padding: 130px;
   margin-bottom: 0;
 }
 
 .search-label{
-  font-family: Chalduster, fantasy;
+  font-family: Chalkdduster, fantasy;
   font-size: 40px;
   margin: auto;
 }
@@ -150,7 +167,7 @@
 }
 
 #map{
-  height:500px;
+  height:700px;
   width: 100%;
   border-radius:15px;
 }
@@ -160,15 +177,9 @@
   box-shadow: 10px 10px 5px #aaaaaa;
 }
 
-#contact_us table{
-  color: #41B8F7;
-  font-size: 20px;
-
-}
-
 footer{
   background-color: #41B8F7;
-  color: black;
+  color: white;
   margin-top: 0;
 }
 
@@ -277,3 +288,88 @@ footer{
   margin-bottom: 0;
 }
 
+.add_job_header{
+  font-family: Chalkduster, fantasy;
+}
+
+.add_job_header h1{
+  font-size: 50px;
+}
+
+.add_jobs{
+  width: 70%;
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.add_jobs textarea{
+  background: transparent;
+  transition: transform .2s;
+  width: 80%;
+}
+
+.add_jobs input[type=text]{
+  width: 80%;
+  background:transparent;
+  color: #41B8F7;
+  transition: transform .2s;
+}
+
+.add_jobs textarea:focus{
+  background: black;
+  transform: scale(1.2);
+  color: #41B8F7;
+}
+
+.add_jobs input[type=text]:focus{
+  transform:scale(1.2);
+}
+
+
+.add_jobs ::placeholder{
+  color: #41B8F7;
+  opacity: 0.7;
+}
+
+.fb-page{
+  border-radius: 10px !important;
+}
+
+.alert-danger{
+  margin-bottom: 0;
+  border:none;
+  background-color: #fff;
+  text-align: center;
+  color: red;
+  font-size: 40px;
+  font-family: Chalkduster, fantasy;
+}
+
+#view_jobs{
+  background: #000;
+  margin-bottom: 0;
+}
+
+.list-group{
+  width: 60%;
+  box-shadow: 5px 5px 5px 5px #252525;
+  font-family: OCR A Std, monospace;
+  font-size: 35px;
+  background-color: #41B8F7 !important;
+
+}
+
+.list-group-item:hover{
+  background-color: #41B8F7;
+}
+
+.list-group a{
+  transition: transform .2s;
+  color: white;
+}
+
+.list-group a:hover{
+  transform:scale(1.5);
+}

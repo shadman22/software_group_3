@@ -1,10 +1,47 @@
 extends layout
 
 block content
-  h1 #{title}
-  ul.list-group
-    each job, i in jobs
-      li.list-group-item
-        a(href="/jobs/"+job._id)= job.title
-      
+	br
+	.container.add_job_header
+		center
+			h1 Posted Jobs
+	.jumbotron#view_jobs
+		.container.view_jobs
+			center
+				ul.list-group
+					each job, i in jobs
+						li.list-group-item.list-group-item-action
+							a.btn(href="/jobs/"+job._id)= job.title
+	footer
+		br
+		.container
+			center
+				table
+					tr
+						td
+							.icon.social.fb
+								i.fa.fa-facebook
+						td
+							.icon.social.in
+								i.fa.fa-linkedin
+						td
+							.icon.social.tw
+								i.fa.fa-twitter
+		br
+		.container 
+			.row
+				.col
+					p this a text
+				.col
+					p this a text
+				.col
+					p this a text
+				.col
+					p this a text
+
+		hr
+		.container
+			center
+				| copyright done 2018
+		br      
     

@@ -1,16 +1,68 @@
 extends layout
 
 block content
-  h1 #{title}
-  form(method='POST', action='/jobs/add')
-    #form-group
-      label Title:
-      input.form-control(name='title', type='text')
-    #form-group
-      label Body
-      textarea.form-control(name='body')
-    #form-group
-      label Amount
-      textarea.form-control(name='amount')
-        
-    input.btn.btn-primary(type='submit', value="Submit")
+  .container.add_job_header
+    br
+    center
+      h1 Welcome #{employer.name}!
+      br
+      h2 Post A New Job
+      hr
+      br
+  .container.add_jobs
+    br
+    center
+      form(method='POST', action='/jobs/add')
+        .form-group
+          input.form-control.form-input(name='title', type='text' placeholder="Job Title")
+        br
+        .form-group
+          textarea.form-control.form-input(name='body' placeholder="Job Description & Requirements")
+        br
+        .form-group
+          textarea.form-control.form-input(name='amount' placeholder="Renumeration")
+        br
+        center
+          input.btn.login-btn(type='submit', value="Post Job")
+          button.btn.login-btn(type="button" data-toggle="modal" data-target="#exampleModal") Terms      
+        br
+  #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          h5#exampleModalLabel.modal-title Modal title
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-body
+          | ...
+        .modal-footer
+          button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+          button.btn.btn-primary(type='button') Save changes
+  br
+  br
+  footer
+    br
+    .container
+      center
+        table
+          tr
+            td
+              .icon.social.fb
+                i.fa.fa-facebook
+            td
+              .icon.social.in
+                i.fa.fa-linkedin
+            td
+              .icon.social.tw
+                i.fa.fa-twitter
+    br
+    .container 
+      .row
+        .col
+          p this a text
+        .col
+          p this a text
+        .col
+          p this a text
+        .col
+          p this a text
