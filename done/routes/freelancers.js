@@ -91,6 +91,14 @@ router.post('/login',function(req,res,next){
   })(req,res,next);
 });
 
+router.get('/:id',function(req, res){
+  Freelancer.findById(req.params.id, function(err, fl){
+    res.render('fl_detail',{
+      fl:fl,
+      specializaton: fl.specializaton
+    });
+  });
+});
 
 
 

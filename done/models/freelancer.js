@@ -39,6 +39,6 @@ const FreelancerSchema = mongoose.Schema({
     type:String,
     required: true
   }
-});
+}, {collection: 'freelancer'});
 
-const Freelancer=module.exports=mongoose.model('Freelancer', FreelancerSchema);
+const Freelancer=module.exports=mongoose.model('Freelancer', FreelancerSchema, "freelancers");

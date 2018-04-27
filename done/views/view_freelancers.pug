@@ -3,8 +3,8 @@ extends layout
 block content
   h1 #{title}
   ul.list-group
-    each freelancer, i in freelancers
+    each fl, i in fls
       li.list-group-item
-        a(href="/freelancers/"+freelancer._id)= freelancer.name
+        a(href="/freelancers/"+fl._id)= fl.name
       
     

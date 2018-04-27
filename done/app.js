@@ -101,6 +101,24 @@ app.get('/', function(req, res){
 
   });
 });
+//post Search
+app.post('/',function(req,res){
+  const searchvalue=req.body.searchtext;
+  console.log(searchvalue);
+  let query={specializaton: {$regex: searchvalue, $options:'i'}}
+  console.log(query);
+  Freelancer.find(query).exec(function(err, fls){
+    if(err){
+      console.log(err);
+    }else{
+      console.log(JSON.stringify(fls));
+    res.render('view_freelancers',{
+      title: 'Your search returned the following freelancers',
+      fls:fls
+
+    })}
+  });
+});
 
 
 //Router files
@@ -112,22 +130,7 @@ let freelancers=require('./routes/freelancers');
 app.use('/jobs', jobs);
 app.use('/employers', employers);
 app.use('/freelancers',freelancers);
-/*
-//post Search
-app.post('/',function(req,res,next){
-  let searchterm=req.body.search;
-  Freelancer.find({specializaton : new RegExp('^'+req.body.search+'$',"i")},function(err, freelancers){
-    if(err){
-      console.log(err);
-    }else{
-    res.render('view_freelancers',{
-      title: 'Your search returned the following freelancers',
-      freelancers:freelancers
 
-    })}
-  });
-});
-*/
 app.listen(3000, function(){
   console.log('Server started on port 3000');
 });
