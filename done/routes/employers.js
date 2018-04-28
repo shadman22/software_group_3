@@ -4,7 +4,7 @@ const bcrypt=require('bcryptjs');
 const passport=require('passport');
 
 let Employer=require('../models/employer');
-let Freelancer=require('../models/freelancer');
+
 
 //Register form
 
