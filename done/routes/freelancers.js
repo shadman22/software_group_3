@@ -27,6 +27,7 @@ router.post('/register', function(req,res){
   const profession=req.body.profession;
   const specializaton=req.body.specializaton;
 
+//Req validations check
 
   req.checkBody('name', 'Name is required').notEmpty();
   req.checkBody('email', 'Email is required').notEmpty();
@@ -39,6 +40,7 @@ router.post('/register', function(req,res){
   req.checkBody('specializaton', 'Please enter your skills').notEmpty();
   let errors=req.validationErrors();
 
+//if error than show the required fields or message
   if(errors){
     res.render('freelancer_register',{
       errors:errors
@@ -67,6 +69,8 @@ router.post('/register', function(req,res){
               console.log(err);
               return;
           }
+
+//else than registered will be done & show the success message
           else{
             req.flash('success', 'You are now registered on done!');
             res.redirect('/freelancers/login');
@@ -78,9 +82,12 @@ router.post('/register', function(req,res){
 
 });
 
+//Login form
+
 router.get('/login', function(req,res){
   res.render('freelancer_login');
 });
+
 //Login post request
 
 router.post('/login',function(req,res,next){
@@ -90,6 +97,8 @@ router.post('/login',function(req,res,next){
     failureFlash:true
   })(req,res,next);
 });
+
+//Login get request
 
 router.get('/:id',function(req, res){
   Freelancer.findById(req.params.id, function(err, fl){

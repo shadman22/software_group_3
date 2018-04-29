@@ -105,7 +105,17 @@ app.get('/', function(req, res){
 app.post('/',function(req,res){
   const searchvalue=req.body.searchtext;
   console.log(searchvalue);
-  let query={specializaton: {$regex: searchvalue, $options:'i'}}
+  let query=({ "$or": [
+    {name: {$regex: searchvalue, $options:'i'}},
+    {username: {$regex: searchvalue, $options:'i'}},
+    {email: {$regex: searchvalue, $options:'i'}},
+    {location: {$regex: searchvalue, $options:'i'}},
+    {specializaton: {$regex: searchvalue, $options:'i'}}
+
+
+]})
+
+
   console.log(query);
   Freelancer.find(query).exec(function(err, fls){
     if(err){
