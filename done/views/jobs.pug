@@ -1,14 +1,57 @@
 extends layout
 
 block content
-  h1= job.title
-  h5 Posted by #{postedby}
-  p= job.body
-  p Payment #{job.amount}
-  hr
-  if employer
-    if employer.id == job.postedby  
-      a.btn.btn-default(href='/jobs/edit/'+job._id) Edit
-      a.btn.btn-danger.delete-article(href='#', data-id= job._id) Delete
-  else if freelancer    
-      a.btn.btn-danger.delete-article(href='#', data-id= job._id) Apply
+  .jumbotron(style="background:#000; margin-bottom:0;")
+    .container#jobs
+      center
+        h1 Job Title: 
+          b#job_title #{job.title}
+        h2 Posted by: 
+          b#job_posted #{postedby}
+      hr
+      br
+      p= job.body
+      p Payment 
+        b#payment_amount #{job.amount}
+      br
+      hr
+      if employer
+        if employer.id == job.postedby  
+          center
+            a.btn.btn-light.job_btn(href='/jobs/edit/'+job._id) Edit Job
+            a.btn.btn-danger.delete-article.job_btn(href='#', data-id= job._id, style="margin-left:2%;") Delete Job
+          br
+      else if freelancer    
+          a.btn.btn-danger.delete-article(href='#', data-id= job._id) Apply
+  footer
+    br
+    .container
+      center
+        table
+          tr
+            td
+              .icon.social.fb
+                i.fa.fa-facebook
+            td
+              .icon.social.in
+                i.fa.fa-linkedin
+            td
+              .icon.social.tw
+                i.fa.fa-twitter
+    br
+    .container 
+      .row
+        .col
+          p this a text
+        .col
+          p this a text
+        .col
+          p this a text
+        .col
+          p this a text
+
+    hr
+    .container
+      center
+        | copyright done 2018
+    br

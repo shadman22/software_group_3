@@ -54,7 +54,6 @@ html
     .jumbotron.banner
       .container.header-search
         center
-          br
           h1 Welcome To Done
           h2 Make money and get your job done easy!
         center
@@ -63,9 +62,10 @@ html
           form(method='POST', action='/')
             #form-group
               //label.search-label Search
-              input.form-control.search-header(name='searchtext', type='text' placeholder="SEARCH")
+              input.form-control.search-header(name='searchtext', type='text' placeholder="SEARCH FREELANCERS")
             br    
             input.btn.btn-search-header(type='submit', value="Submit")
+          br
     nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
       a.navbar-brand(href='#' style="margin-left:3%;") done
       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')

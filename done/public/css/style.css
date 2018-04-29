@@ -43,8 +43,8 @@ body{
   background:url('/imgs/banner_home.jpg') no-repeat;
   background-size: 100% 700px;
   border-radius: 0px;
-  height: 600px;
-  padding: 130px;
+  height: 80%;
+  padding: 70px;
   margin-bottom: 0;
 }
 
@@ -54,14 +54,18 @@ body{
   margin: auto;
 }
 
+.header-search{
+  margin-top: 0;
+}
+
 .header-search h1{
   font-family: Chalkduster, fantasy;
-  font-size: 80px;
+  font-size: 70px;
 }
 
 .header-search h2{
   font-family: Chalkduster, fantasy;
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .search-header{
@@ -372,4 +376,115 @@ footer{
 
 .list-group a:hover{
   transform:scale(1.5);
+}
+
+#jobs{
+  border:1px solid black;
+  padding: 20px;
+  border-radius: 2em;
+  background-color: #fff;
+  box-shadow: 10px 10px 5px #252525;
+}
+
+#jobs h1{
+  font-size: 60px;
+  font-family: Chalkduster, fantasy;
+}
+
+#jobs h2{
+  font-size: 30px;
+  font-family: Chalkduster, fantasy;
+}
+
+#jobs p{
+  font-size: 20px;
+
+}
+
+#payment_amount{
+  color: #41B8F7;
+  text-decoration: underline;
+}
+
+.job_btn{
+  height: 2.5em;
+  width: 8em;
+  transition: transform .2s;
+}
+
+.job_btn:hover{
+  transform: scale(1.1);
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+#job_title{
+  color: #41B8F7;
+}
+
+#job_posted{
+  color: #41B8F7;
+}
+
+.btn-animation{
+  transition: transform .2s;
+}
+
+.btn-animation:hover{
+  transform: scale(1.1);
+  box-shadow: 10px 10px 5px #252525;
+}
+
+#edit_jobs{
+  background-color: #000;
+  padding: 20px;
+  width: 40%;
+  color: #41B8F7;
+  border-radius: 2em;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+#edit_job_title h1{
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Chalkduster, fantasy;
+}
+
+.edit_job textarea{
+  background: transparent;
+  transition: transform .2s;
+  color: #41B8F7;
+  width: 80%;
+}
+
+.edit_job  input[type=text]{
+  width: 80%;
+  background:transparent;
+  color: #41B8F7;
+  transition: transform .2s;
+}
+
+.edit_job textarea:focus{
+  background: transparent;
+  transform: scale(1.2);
+  color: #41B8F7;
+}
+
+.edit_job input[type=text]:focus{
+  transform:scale(1.2);
+}
+
+.label{
+  color: #41B8F7;
+}
+
+.edit_job ::placeholder{
+  color: #41B8F7;
+  opacity: 0.7;
+}
+
+.edit_job label {
+  color: white;
+  text-decoration: underline;
+  text-align: left;
+  font-size: 22px;
 }
