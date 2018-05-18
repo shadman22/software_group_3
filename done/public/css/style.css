@@ -488,3 +488,67 @@ footer{
   text-align: left;
   font-size: 22px;
 }
+
+.freelancer_search{
+  font-family: Chalkduster, fantasy;
+
+}
+
+.search-list{
+  background: black;
+  border-radius: 10px;
+  width: 80%;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.search-list .list-group-item{
+  background: black !important;
+  width: 60% !important;
+}
+
+.search-list a{
+  font-size: 25px !important;
+  color: #41B8F7;
+  font-family: OCR A Std, monospace;
+  transition: transform .2s !important;
+}
+
+.search-list .list-group-item a:hover{
+  transform:scale(1.1) !important;
+}
+
+.search-list hr{
+  border: 1px solid white;
+  opacity: 0.5;
+  width: 50%;
+}
+
+#freelancer_details{
+  padding: 20px;
+  font-family: OCR A Std, monospace;
+  background: white;
+  border-radius: 10px;
+
+}
+
+#freelancer_details h5{
+  font-family: OCR A Std, monospace;
+  color: black;
+}
+
+#freelancer_details h2{
+  font-family: OCR A Std, monospace;
+  color: #41B8F7;
+  font-size: 25px;
+}
+
+.freelancer{
+  font-family: Chalkduster, fantasy;
+  color: white;
+}
+
+#freelancerProfile{
+  background: #000;
+  margin-top: 0;
+  margin-bottom: 0;
+}

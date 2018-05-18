@@ -104,7 +104,9 @@ router.get('/:id',function(req, res){
   Freelancer.findById(req.params.id, function(err, fl){
     res.render('fl_detail',{
       fl:fl,
-      specializaton: fl.specializaton
+      specializaton: fl.specializaton,
+      email: fl.email,
+      contact: fl.contact
     });
   });
 });

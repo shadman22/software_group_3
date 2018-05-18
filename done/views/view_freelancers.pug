@@ -1,10 +1,78 @@
 extends layout
 
 block content
-  h1 #{title}
-  ul.list-group
-    each fl, i in fls
-      li.list-group-item
-        a(href="/freelancers/"+fl._id)= fl.name
-      
-    
+	nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+		a.navbar-brand(href='#' style="margin-left:3%;") done
+		button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+			span.navbar-toggler-icon
+		#navbarSupportedContent.collapse.navbar-collapse
+			ul.navbar-nav.mr-auto
+				li.nav-item.active
+					a.nav-link(href='#')
+						| Home 
+					span.sr-only (current)
+				li.nav-item
+					a.nav-link(href='#about_us') About
+				li.nav-item.dropdown
+					a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+						| Services
+					.dropdown-menu(aria-labelledby='navbarDropdown')
+						a.dropdown-item(href='#') Action
+						a.dropdown-item(href='#') Another action
+						.dropdown-divider
+						a.dropdown-item(href='#') Something else here
+				li.nav-item
+					a.nav-link(href='#') The Team
+				li.nav-item
+					a.nav-link(href='#') Contact Us
+			form.form-inline.my-2.my-lg-0
+				input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
+				button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+	br
+	.container
+		center
+			h1.freelancer_search Your Search Matched the Following Freelancers
+			h5 Click on the freelancer you wish to view, to view their field of expertise.
+		br
+	.container#search_results
+		center
+			ul.search-list
+				each fl, i in fls
+					li.list-group-item
+					a(href="/freelancers/"+fl._id)= fl.name
+					hr
+					br
+	br
+	br
+	footer
+		br
+		.container
+			center
+				table
+					tr
+						td
+							.icon.social.fb
+								i.fa.fa-facebook
+						td
+							.icon.social.in
+								i.fa.fa-linkedin
+						td
+							.icon.social.tw
+								i.fa.fa-twitter
+		br
+		.container 
+			.row
+				.col
+					p this a text
+				.col
+					p this a text
+				.col
+					p this a text
+				.col
+					p this a text
+
+		hr
+		.container
+			center
+				| copyright done 2018
+		br
