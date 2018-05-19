@@ -68,6 +68,55 @@ router.post('/add', function(req,res){
 
 
 });
+//add job route
+router.get('/addjob', ensureAuthenticated, function(req, res){
+
+  res.render('add_job_task', {
+    title: 'Assign new job',
+
+  });
+});
+
+
+// posting job for freelancers
+router.post('/addjob', function(req,res){
+  req.checkBody('title', 'Job title is required').notEmpty();
+  req.checkBody('postedby', 'Posted by is required').notEmpty();
+      req.checkBody('body', 'Job description is required').notEmpty();
+        req.checkBody('amount', 'Job payment detail is required').notEmpty();
+
+
+  //getting errors
+  let errors=req.validationErrors();
+  if(errors){
+    res.render('add_job_task',{
+      title:'Add Articles',
+      errors:errors});
+
+  }else{
+    let job=new Job();
+    job.title=req.body.title;
+    job.postedby=req.user._id;
+    job.body=req.body.body;
+    job.amount=req.body.amount;
+    job.save(function(err){
+      if(err){
+        console.log(err);
+        return
+      }
+      else{
+        req.flash('success', 'The job has been assigned to the freelancer!');
+        res.redirect('/');
+      }
+
+    });
+  }
+
+
+
+});
+
+
 
 //get single item
 
