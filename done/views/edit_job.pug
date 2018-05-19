@@ -31,28 +31,28 @@ block content
   .jumbotron(style="background:#fff; margin-bottom:0; margin-top:0; ")
     .container#edit_job_title
       center
-        h1 #{title}
+        h1.animation-element.slide-left #{title}
         br
     .container#edit_jobs
       center
-        form.edit_job(method='POST', action='/jobs/edit/'+job._id)
+        form.edit_job.animation-element.slide-left(method='POST', action='/jobs/edit/'+job._id)
           .form-group
-            label Title:
-            input.form-control.form-input(name='title', type='text', value=job.title)
+            label.animation-element.slide-left Title:
+            input.form-control.form-input.animation-element.slide-left(name='title', type='text', value=job.title)
           .form-group
-            label Posted By:
-            input.form-control.form-input(name='postedby', type='text', value=job.postedby)
+            label.animation-element.slide-left Posted By:
+            input.form-control.form-input.animation-element.slide-left(name='postedby', type='text', value=job.postedby)
           .form-group
-            label Body:
-            textarea.form-control.form-input(name='body')= job.body
+            label.animation-element.slide-left Body:
+            textarea.form-control.form-input.animation-element.slide-left(name='body')= job.body
           .form-group
-            label Amount:
-            input.form-control.form-input(name='amount', type='text', value=job.amount)
+            label.animation-element.slide-left Amount:
+            input.form-control.form-input.animation-element.slide-left(name='amount', type='text', value=job.amount)
           br  
-          input.btn.login-btn.btn-animation(type='submit', value="Submit")
+          input.btn.login-btn.btn-animation.animation-element.slide-left(type='submit', value="Submit")
   footer
     br
-    .container
+    .container.animation-element.slide-left
       center
         table
           tr
@@ -66,7 +66,7 @@ block content
               .icon.social.tw
                 i.fa.fa-twitter
     br
-    .container 
+    .container.animation-element.slide-left
       .row
         .col
           p this a text
@@ -78,7 +78,7 @@ block content
           p this a text
 
     hr
-    .container
+    .container.animation-element.slide-left
       center
         | copyright done 2018
     br

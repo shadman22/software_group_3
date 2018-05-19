@@ -31,27 +31,27 @@ block content
   .container.add_job_header
     br
     center
-      h1 Welcome #{employer.name}!
+      h1.animation-element.slide-left Welcome #{employer.name}!
       br
-      h2 Post A New Job
+      h2.animation-element.slide-left Post A New Job
       hr
       br
-  .container.add_jobs
+  .container.add_jobs.animation-element.slide-left
     br
     center
       form(method='POST', action='/jobs/add')
-        .form-group
+        .form-group.animation-element.slide-left
           input.form-control.form-input(name='title', type='text' placeholder="Job Title")
         br
-        .form-group
+        .form-group.animation-element.slide-left
           textarea.form-control.form-input(name='body' placeholder="Job Description & Requirements")
         br
-        .form-group
+        .form-group.animation-element.slide-left
           textarea.form-control.form-input(name='amount' placeholder="Renumeration")
         br
         center
-          input.btn.login-btn.btn-animation(type='submit', value="Post Job")
-          button.btn.login-btn.btn-animation(type="button" data-toggle="modal" data-target="#exampleModal") Terms      
+          input.btn.login-btn.btn-animation.animation-element.slide-left(type='submit', value="Post Job")
+          button.btn.login-btn.btn-animation.animation-element.slide-left(type="button" data-toggle="modal" data-target="#exampleModal") Terms      
         br
   #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
     .modal-dialog(role='document')
@@ -69,7 +69,7 @@ block content
   br
   footer
     br
-    .container
+    .container.animation-element.slide-left
       center
         table
           tr
@@ -83,7 +83,7 @@ block content
               .icon.social.tw
                 i.fa.fa-twitter
     br
-    .container 
+    .container.animation-element.slide-left
       .row
         .col
           p this a text

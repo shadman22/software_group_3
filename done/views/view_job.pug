@@ -31,17 +31,17 @@ block content
 	br
 	.container.add_job_header
 		center
-			h1 Posted Jobs
+			h1.animation-element.slide-left Posted Jobs
 	.jumbotron#view_jobs
 		.container.view_jobs
 			center
-				ul.list-group
+				ul.list-group.animation-element.slide-left
 					each job, i in jobs
-						li.list-group-item.list-group-item-action
+						li.list-group-item.list-group-item-action.animation-element.slide-left
 							a.btn(href="/jobs/"+job._id)= job.title
 	footer
 		br
-		.container
+		.container.animation-element.slide-left
 			center
 				table
 					tr
@@ -55,7 +55,7 @@ block content
 							.icon.social.tw
 								i.fa.fa-twitter
 		br
-		.container 
+		.container.animation-element.slide-left
 			.row
 				.col
 					p this a text

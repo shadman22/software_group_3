@@ -31,12 +31,12 @@ block content
 	br
 	.container
 		center
-			h1.freelancer_search Your Search Matched the Following Freelancers
-			h5 Click on the freelancer you wish to view, to view their field of expertise.
+			h1.freelancer_search.animation-element.slide-left Your Search Matched the Following Freelancers
+			h5.animation-element.slide-left Click on the freelancer you wish to view, to view their field of expertise.
 		br
 	.container#search_results
 		center
-			ul.search-list
+			ul.search-list.animation-element.slide-left
 				each fl, i in fls
 					li.list-group-item
 					a(href="/freelancers/"+fl._id)= fl.name
@@ -46,7 +46,7 @@ block content
 	br
 	footer
 		br
-		.container
+		.container.animation-element.slide-left
 			center
 				table
 					tr
@@ -60,7 +60,7 @@ block content
 							.icon.social.tw
 								i.fa.fa-twitter
 		br
-		.container 
+		.container.animation-element.slide-left 
 			.row
 				.col
 					p this a text
@@ -72,7 +72,7 @@ block content
 					p this a text
 
 		hr
-		.container
+		.container.animation-element.slide-left
 			center
 				| copyright done 2018
 		br

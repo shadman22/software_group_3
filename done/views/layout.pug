@@ -11,7 +11,7 @@ html
     link(rel="stylesheet" href='/bower_components/bootstrap/dist/css/bootstrap.css')
     link(rel="stylesheet" href='/css/style.css')
     
-  body(onload="navbaranimation(); scrollsmooth();")
+  body(onload="navbaranimation(); scrollsmooth(); content_animation();")
     div(id="fb-root")
     div(class="container")
       center
@@ -54,17 +54,17 @@ html
     .jumbotron.banner
       .container.header-search
         center
-          h1 Welcome To Done
-          h2 Make money and get your job done easy!
+          h1.animation-element.slide-left Welcome To Done
+          h2.animation-element.slide-left Make money and get your job done easy!
         center
           br
           br
           form(method='POST', action='/')
-            #form-group
+            #form-group.animation-element.slide-left
               //label.search-label Search
               input.form-control.search-header(name='searchtext', type='text' placeholder="SEARCH FREELANCERS")
             br    
-            input.btn.btn-search-header(type='submit', value="Submit")
+            input.btn.btn-search-header.animation-element.slide-left(type='submit', value="Submit")
           br
     !=messages('message', locals)
     if errors

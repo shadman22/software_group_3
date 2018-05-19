@@ -31,17 +31,17 @@ block content
   .jumbotron(id="freelancer")
     .container(id="freelancer_header")
       center
-        h1 Freelancer Login
+        h1.animation-element.slide-left Freelancer Login
       br
     .container.login
       form(method='POST', action='/freelancers/login')
         .form-group
-          input.form-control.form-input(name='username', type='text' placeholder="Username")
+          input.form-control.form-input.animation-element.slide-left(name='username', type='text' placeholder="Username")
         .form-group
-          input.form-control.form-input(name='password', type='password' placeholder="Password")
+          input.form-control.form-input.animation-element.slide-left(name='password', type='password' placeholder="Password")
         br
         center
-          input.btn.login-btn(type='submit', value="LOGIN")
+          input.btn.login-btn.animation-element.slide-left.btn-animation(type='submit', value="LOGIN")
   footer
     br
     .container

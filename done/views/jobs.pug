@@ -31,28 +31,28 @@ block content
   .jumbotron(style="background:#000; margin-bottom:0;")
     .container#jobs
       center
-        h1 Job Title: 
+        h1.animation-element.slide-left Job Title: 
           b#job_title #{job.title}
-        h2 Posted by: 
+        h2.animation-element.slide-left Posted by: 
           b#job_posted #{postedby}
       hr
       br
-      p= job.body
-      p Payment 
+      p.animation-element.slide-left= job.body
+      p.animation-element.slide-left Payment 
         b#payment_amount #{job.amount}
       br
       hr
       if employer
         if employer.id == job.postedby  
           center
-            a.btn.btn-light.job_btn(href='/jobs/edit/'+job._id) Edit Job
-            a.btn.btn-danger.delete-article.job_btn(href='#', data-id= job._id, style="margin-left:2%;") Delete Job
+            a.btn.btn-light.job_btn.animation-element.slide-left(href='/jobs/edit/'+job._id) Edit Job
+            a.btn.btn-danger.delete-article.job_btn.animation-element.slide-left(href='#', data-id= job._id, style="margin-left:2%;") Delete Job
           br
       else if freelancer    
           a.btn.btn-danger.delete-article(href='#', data-id= job._id) Apply
   footer
     br
-    .container
+    .container.animation-element.slide-left
       center
         table
           tr
@@ -66,7 +66,7 @@ block content
               .icon.social.tw
                 i.fa.fa-twitter
     br
-    .container 
+    .container.animation-element.slide-left
       .row
         .col
           p this a text
@@ -81,4 +81,5 @@ block content
     .container
       center
         | copyright done 2018
+    br
     br
