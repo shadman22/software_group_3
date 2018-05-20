@@ -16,13 +16,13 @@ block content
         li.nav-item
           a.nav-link(href='/#services') Services
         li.nav-item
-          a.nav-link(href='/#') Tutors
+          a.nav-link(href='/tutors/viewtutors') Tutors
         li.nav-item
           a.nav-link(href='/#team') The Team
         li.nav-item
           a.nav-link(href='/#contact_us') Contact Us
       form.form-inline.my-2.my-lg-0
-        input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
+        input.form-control.mr-sm-2(name='searchtext',type='text', placeholder='Search', aria-label='Search')
         button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
   .jumbotron(style="background:#fff; margin-bottom:0; margin-top:0; ")
     .container#edit_job_title
@@ -54,27 +54,59 @@ block content
           tr
             td
               .icon.social.fb
-                i.fa.fa-facebook
+                a(href="https://www.facebook.com/Done-1645889158779880/" target="_blank")
+                  i.fa.fa-facebook
             td
               .icon.social.in
-                i.fa.fa-linkedin
+                a(href="https://linkedin.com/" target="_blank")
+                  i.fa.fa-linkedin
             td
               .icon.social.tw
-                i.fa.fa-twitter
+                a(href="https://www.twitter.com/" target="_blank")
+                  i.fa.fa-twitter
+    hr
     br
-    .container.animation-element.slide-left
+    .container.animation-element.slide-left 
       .row
         .col
-          p this a text
+          p 
+            a(href="#home")
+              | Home
+          p 
+            a(href="#about_us")
+              | About Us
+          p 
+            a(href="#team")
+              | Team 
+          p 
+            a(href="#services")
+              | Services
+          p 
+            a(href="/tutors/viewtutors")
+              | Tutors
+          p 
+            a(href="#contact_us")
+              | Contact Us
         .col
-          p this a text
+          p Need to get your job done?
+          p Then this is the site for you!
+          p Search, Employ, Pay
+          p Then Simply sit back and relax and watch your job get done.
         .col
-          p this a text
+          p Choose From a Pool of
+          p Tutors
+          p Developers
+          p Photographers 
+          p And any other profession that comes to mind
         .col
-          p this a text
+          p And if you get stuck contact us at:
+          p Email: support@done.com
+          p Phone: +880 1675 9521 73
+          p Address: House 70, Road 11/A, Dhanmondi R/A, Dhaka - 1209, Bangladesh
 
     hr
-    .container.animation-element.slide-left
+    .container.animation-element.slide-left(style="color:white;")
       center
-        | copyright done 2018
+        | copyright done® 2018
     br
+

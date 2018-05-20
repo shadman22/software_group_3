@@ -24,21 +24,21 @@ block content
 			form.form-inline.my-2.my-lg-0
 				input.form-control.mr-sm-2(name='searchtext',type='text', placeholder='Search', aria-label='Search')
 				button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
-	.jumbotron#freelancerProfile
+	.jumbotron#tutorProfile
 		.container
 			center
-				h1.freelancer.animation-element.slide-left Freelancer Profile
+				h1.tutor.animation-element.slide-left Tutor Profile
 				br
-		.container#freelancer_details
+		.container#tutor_details
 			center
 				table
 					tr
 						td
 							img.rounded-circle.animation-element.slide-left(src="/imgs/users.png", height=90)
 						td
-							h1.animation-element.slide-left= fl.name
+							h1.animation-element.slide-left= tutors.name
 				hr
-				h2.animation-element.slide-left Specializes in: #{specializaton}
+				h5(style="color:white;").animation-element.slide-left Specializes in: #{specializaton}
 				hr
 			h5.animation-element.slide-left Email: #{email}
 			h5.animation-element.slide-left Contact: #{contact}
@@ -46,7 +46,7 @@ block content
 			center
 				if employer
 					a(href="/jobs/addjob")
-						input.btn.login-btn.animation-element.slide-left.btn-animation(type='submit', value="Assign")
+						input.btn.login-btn.animation-element.slide-left.btn-animation(type='submit', value="Hire!")
 			hr
 			center
 				h5.animation-element.slide-left Socials

@@ -24,51 +24,41 @@ block content
       form.form-inline.my-2.my-lg-0
         input.form-control.mr-sm-2(name='searchtext',type='text', placeholder='Search', aria-label='Search')
         button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
-  .container.add_job_header
+  .jumbotron(id="freelancer")
     br
-    center
-      h1.animation-element.slide-left Welcome #{employer.name}!
-      br
-      h2.animation-element.slide-left Post A New Job
-      hr
-      br
-  .container.add_jobs.animation-element.slide-left
+    .container
+      center
+        h1.animation-element.slide-left(id="tutor_header") Tutor's Registration
+        br
+    .container.register
+      form.freelancer_form_register.animation-element.slide-left(method='POST', action='/tutors/register')
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(name='name', type='text' placeholder="Name")
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(placeholder="Email" name='email', type='text')
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(placeholder="Username" name='username', type='text')
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(placeholder="Contact" name='contact', type='text')
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(name='password', type='password' placeholder="Password")
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(name='password1', type='password' placeholder="Confirm Password")
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(name='location', type='text', placeholder="Enter your location")
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(name='age', type='text' placeholder="Age")
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(name='profession', type='text' placeholder="Profession")
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(name='specializaton', type='text', placeholder="Please enter your skills here. Use keywords such as 'Photography, Web design'")
+        .form-group    
+          input.form-control.form-input.animation-element.slide-left(name='eduback', type='text', placeholder="Educational Background")
+          br
+          center
+            input.btn.login-btn.animation-element.slide-left.btn-animation(type='submit', value="REGISTER")
     br
-    center
-      form(method='POST', action='/jobs/addjob')
-        .form-group.animation-element.slide-left
-          input.form-control.form-input(name='title', type='text' placeholder="Job Title")
-        br
-        .form-group.animation-element.slide-left
-          input.form-control.form-input(name='postedby', type='text' placeholder="Posted By")            
-        br  
-        .form-group.animation-element.slide-left
-          textarea.form-control.form-input(name='body' placeholder="Job Description & Requirements")
-        br
-        .form-group.animation-element.slide-left
-          textarea.form-control.form-input(name='amount' placeholder="Renumeration")
-        br
-        .form-group.animation-element.slide-left
-          textarea.form-control.form-input(name='assignedto' placeholder="Assigned To")
-        br
-        center
-          input.btn.login-btn.btn-animation.animation-element.slide-left(type='submit', value="Post Job")
-          button.btn.login-btn.btn-animation.animation-element.slide-left(type="button" data-toggle="modal" data-target="#exampleModal") Terms      
-        br
-  #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
-    .modal-dialog(role='document')
-      .modal-content
-        .modal-header
-          h5#exampleModalLabel.modal-title Modal title
-          button.close(type='button', data-dismiss='modal', aria-label='Close')
-            span(aria-hidden='true') ×
-        .modal-body
-          | ...
-        .modal-footer
-          button.btn.btn-secondary(type='button', data-dismiss='modal') Close
-          button.btn.btn-primary(type='button') Save changes
-  br
-  br
+    br
   footer
     br
     .container.animation-element.slide-left
@@ -106,7 +96,7 @@ block content
               | Services
           p 
             a(href="/tutors/viewtutors")
-              | Tutors
+              Tutors
           p 
             a(href="#contact_us")
               | Contact Us
@@ -132,4 +122,3 @@ block content
       center
         | copyright done® 2018
     br
-

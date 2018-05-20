@@ -24,47 +24,21 @@ block content
 			form.form-inline.my-2.my-lg-0
 				input.form-control.mr-sm-2(name='searchtext',type='text', placeholder='Search', aria-label='Search')
 				button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
-	.jumbotron#freelancerProfile
-		.container
-			center
-				h1.freelancer.animation-element.slide-left Freelancer Profile
-				br
-		.container#freelancer_details
-			center
-				table
-					tr
-						td
-							img.rounded-circle.animation-element.slide-left(src="/imgs/users.png", height=90)
-						td
-							h1.animation-element.slide-left= fl.name
-				hr
-				h2.animation-element.slide-left Specializes in: #{specializaton}
-				hr
-			h5.animation-element.slide-left Email: #{email}
-			h5.animation-element.slide-left Contact: #{contact}
+	br
+	.container.add_job_header
+		center
+			h1.animation-element.slide-left The Following Tutors are Available
+			h5.animation-element.slide-left *Click on the Tutors Name to View Full Details
 			br
+	.jumbotron#view_tutors
+		.container.view_tutors
 			center
-				if employer
-					a(href="/jobs/addjob")
-						input.btn.login-btn.animation-element.slide-left.btn-animation(type='submit', value="Assign")
-			hr
-			center
-				h5.animation-element.slide-left Socials
-			.container.animation-element.slide-left
-				center
-					table
-						tr
-							td
-								.icon.social.fb
-									i.fa.fa-facebook
-							td
-								.icon.social.in
-									i.fa.fa-linkedin
-							td
-								.icon.social.tw
-									i.fa.fa-twitter
-			br
-
+				ul.list-group.animation-element.slide-left
+					each tutor, i in tutors
+						li.list-group-item.list-group-item-action.animation-element.slide-left
+							a.btn(href="/tutors/"+tutor._id)= tutor.name 
+							p#tutorSpecializes= tutor.specializaton
+							hr
 	footer
 		br
 		.container.animation-element.slide-left
@@ -102,7 +76,7 @@ block content
 							| Services
 					p 
 						a(href="/tutors/viewtutors")
-							| Tutors
+							Tutors
 					p 
 						a(href="#contact_us")
 							| Contact Us
@@ -127,5 +101,7 @@ block content
 		.container.animation-element.slide-left(style="color:white;")
 			center
 				| copyright done® 2018
+		br
+		br
 		br
 

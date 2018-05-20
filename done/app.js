@@ -137,10 +137,11 @@ let jobs=require('./routes/jobs');
 
 let employers=require('./routes/employers');
 let freelancers=require('./routes/freelancers');
+let tutors=require('./routes/tutors');
 app.use('/jobs', jobs);
 app.use('/employers', employers);
 app.use('/freelancers',freelancers);
-
+app.use('/tutors', tutors);
 app.listen(3000, function(){
   console.log('Server started on port 3000');
 });
