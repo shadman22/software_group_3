@@ -13,14 +13,10 @@ block content
           span.sr-only (current)
         li.nav-item
           a.nav-link(href='/#about_us') About
-        li.nav-item.dropdown
-          a#navbarDropdown.nav-link.dropdown-toggle(href='/#services', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-            | Services
-          .dropdown-menu(aria-labelledby='navbarDropdown')
-            a.dropdown-item(href='#') Action
-            a.dropdown-item(href='#') Another action
-            .dropdown-divider
-            a.dropdown-item(href='#') Something else here
+        li.nav-item
+          a.nav-link(href='/#services') Services
+        li.nav-item
+          a.nav-link(href='/#') Tutors
         li.nav-item
           a.nav-link(href='/#team') The Team
         li.nav-item
@@ -57,14 +53,14 @@ block content
     .modal-dialog(role='document')
       .modal-content
         .modal-header
-          h5#exampleModalLabel.modal-title Modal title
+          center
+            h5#exampleModalLabel.modal-title Terms and Conditions
           button.close(type='button', data-dismiss='modal', aria-label='Close')
             span(aria-hidden='true') ×
         .modal-body
-          | ...
+          | By adding a job you agree to our terms and conditions and agree to abide by them. If you go against the terms and conditions in any manner you will be in complete violation of them and will be responsible legally.
         .modal-footer
           button.btn.btn-secondary(type='button', data-dismiss='modal') Close
-          button.btn.btn-primary(type='button') Save changes
   br
   br
   footer
