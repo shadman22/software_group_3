@@ -1,0 +1,70 @@
+extends layout
+
+block content
+	nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+		a.navbar-brand(href='/' style="margin-left:3%;") done
+		button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+			span.navbar-toggler-icon
+		#navbarSupportedContent.collapse.navbar-collapse
+			ul.navbar-nav.mr-auto
+				li.nav-item.active
+					a.nav-link(href='/')
+						| Home 
+					span.sr-only (current)
+				li.nav-item
+					a.nav-link(href='/#about_us') About
+				li.nav-item
+					a.nav-link(href='/#services') Services
+				li.nav-item
+					a.nav-link(href='/#') Tutors
+				li.nav-item
+					a.nav-link(href='/#team') The Team
+				li.nav-item
+					a.nav-link(href='/#contact_us') Contact Us
+			form.form-inline.my-2.my-lg-0
+				input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
+				button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+	br
+	.container.add_job_header
+		center
+			h1.animation-element.slide-left Available Tutors
+	.jumbotron#view_tutors
+		.container.view_tutors
+			center
+				ul.list-group.animation-element.slide-left
+					each tutor, i in tutors
+						li.list-group-item.list-group-item-action.animation-element.slide-left
+							a.btn(href="/tutors/"+tutor._id)= tutor.name
+	footer
+		br
+		.container.animation-element.slide-left
+			center
+				table
+					tr
+						td
+							.icon.social.fb
+								i.fa.fa-facebook
+						td
+							.icon.social.in
+								i.fa.fa-linkedin
+						td
+							.icon.social.tw
+								i.fa.fa-twitter
+		br
+		.container.animation-element.slide-left
+			.row
+				.col
+					p this a text
+				.col
+					p this a text
+				.col
+					p this a text
+				.col
+					p this a text
+
+		hr
+		.container
+			center
+				| copyright done 2018
+		br      
+    

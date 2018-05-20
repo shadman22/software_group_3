@@ -98,7 +98,7 @@ router.post('/login',function(req,res,next){
   })(req,res,next);
 });
 
-//Login get request
+//Get single freelancer detail
 
 router.get('/:id',function(req, res){
   Freelancer.findById(req.params.id, function(err, fl){

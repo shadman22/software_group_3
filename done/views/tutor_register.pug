@@ -1,0 +1,87 @@
+extends layout
+
+block content
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+    a.navbar-brand(href='#' style="margin-left:3%;") done
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link(href='/')
+            | Home 
+          span.sr-only (current)
+        li.nav-item
+          a.nav-link(href='/#about_us') About
+        li.nav-item
+          a.nav-link(href='/#services') Services
+        li.nav-item
+          a.nav-link(href='/#') Tutors
+        li.nav-item
+          a.nav-link(href='/#team') The Team
+        li.nav-item
+          a.nav-link(href='/#contact_us') Contact Us
+      form.form-inline.my-2.my-lg-0
+        input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search')
+        button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+  .jumbotron(id="freelancer")
+    br
+    .container
+      center
+        h1.animation-element.slide-left(id="tutor_header") Tutor's Registration
+        br
+    .container.register
+      form.freelancer_form_register.animation-element.slide-left(method='POST', action='/tutors/register')
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(name='name', type='text' placeholder="Name")
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(placeholder="Email" name='email', type='text')
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(placeholder="Username" name='username', type='text')
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(placeholder="Contact" name='contact', type='text')
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(name='password', type='password' placeholder="Password")
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(name='password1', type='password' placeholder="Confirm Password")
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(name='location', type='text', placeholder="Enter your location")
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(name='age', type='text' placeholder="Age")
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(name='profession', type='text' placeholder="Profession")
+        .form-group
+          input.form-control.form-input.animation-element.slide-left(name='specializaton', type='text', placeholder="Please enter your skills here. Use keywords such as 'Photography, Web design'")
+        .form-group    
+          input.form-control.form-input.animation-element.slide-left(name='eduback', type='text', placeholder="Educational Background")
+          br
+          center
+            input.btn.login-btn.animation-element.slide-left.btn-animation(type='submit', value="REGISTER")
+    br
+    br
+  footer
+    br
+    .container
+      center
+        table
+          tr
+            td
+              .icon.social.fb
+                i.fa.fa-facebook
+            td
+              .icon.social.in
+                i.fa.fa-linkedin
+            td
+              .icon.social.tw
+                i.fa.fa-twitter
+    br
+    .container 
+      .row
+        .col
+          p this a text
+        .col
+          p this a text
+        .col
+          p this a text
+        .col
+          p this a text
