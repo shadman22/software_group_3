@@ -183,7 +183,7 @@ body{
 
 footer{
   background-color: #41B8F7;
-  color: white;
+  color: #000;
   margin-top: 0;
 }
 
@@ -577,4 +577,21 @@ footer{
   -o-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
   transform: translate3d(0px, 0px, 0px);
+}
+
+footer a{
+  color: #000;
+}
+
+footer a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+
+#team a{
+  color: #000;
+}
+
+#team a:hover{
+  color: #fff;
 }
